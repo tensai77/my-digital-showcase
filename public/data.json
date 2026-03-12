@@ -1,0 +1,86 @@
+{
+  "name": "Naman Sharma",
+  "title": "DevOps & AI Enthusiast",
+  "profileImage": "https://api.dicebear.com/9.x/initials/svg?seed=NS&backgroundColor=0f766e&textColor=ffffff",
+  "introduction": "Building scalable systems and intelligent solutions. Passionate about bridging the gap between development and operations with modern tooling and machine learning.",
+  "about": "I'm a Computer Science student with a deep passion for DevOps practices and Artificial Intelligence. I enjoy automating workflows, building CI/CD pipelines, and developing machine learning models that solve real-world problems. My goal is to create robust, scalable systems that make a meaningful impact. When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, and sharing knowledge with the developer community.",
+  "skills": {
+    "DevOps & Cloud": [
+      { "name": "Docker", "level": 85 },
+      { "name": "GitHub Actions", "level": 80 },
+      { "name": "Linux", "level": 90 },
+      { "name": "CI/CD", "level": 75 }
+    ],
+    "Programming": [
+      { "name": "Python", "level": 90 },
+      { "name": "JavaScript", "level": 70 },
+      { "name": "Bash", "level": 75 },
+      { "name": "SQL", "level": 65 }
+    ],
+    "AI & ML": [
+      { "name": "TensorFlow", "level": 75 },
+      { "name": "Computer Vision", "level": 70 },
+      { "name": "Data Analysis", "level": 65 },
+      { "name": "Neural Networks", "level": 60 }
+    ]
+  },
+  "projects": [
+    {
+      "title": "Traffic Sign Recognition System",
+      "description": "Deep learning model for traffic sign classification using CNN and TensorFlow. Achieved 95% accuracy on the German Traffic Sign Recognition Benchmark dataset.",
+      "tech": ["Python", "TensorFlow", "Computer Vision", "NumPy"],
+      "github": "#",
+      "demo": "#"
+    },
+    {
+      "title": "CI/CD Pipeline Project",
+      "description": "Automated DevOps pipeline using GitHub Actions and Docker containers. Reduced deployment time by 60% with automated testing and containerized builds.",
+      "tech": ["Docker", "GitHub Actions", "DevOps", "YAML"],
+      "github": "#",
+      "demo": "#"
+    },
+    {
+      "title": "Infrastructure Monitoring Dashboard",
+      "description": "Real-time server monitoring dashboard with alerting system. Tracks CPU, memory, disk usage and sends notifications on threshold breaches.",
+      "tech": ["Python", "Grafana", "Prometheus", "Linux"],
+      "github": "#"
+    },
+    {
+      "title": "Sentiment Analysis API",
+      "description": "REST API for text sentiment analysis using NLP techniques. Deployed as a containerized microservice with automated CI/CD.",
+      "tech": ["Python", "Flask", "Docker", "NLP"],
+      "github": "#",
+      "demo": "#"
+    }
+  ],
+  "experience": [
+    {
+      "role": "Computer Science Student",
+      "organization": "University",
+      "period": "2022 — Present",
+      "description": "Studying software engineering, DevOps practices, and machine learning systems. Active participant in hackathons and coding competitions."
+    },
+    {
+      "role": "Open Source Contributor",
+      "organization": "Various Projects",
+      "period": "2023 — Present",
+      "description": "Contributing to open-source DevOps tools and ML libraries. Focused on improving documentation and adding new features."
+    },
+    {
+      "role": "Freelance Developer",
+      "organization": "Self-employed",
+      "period": "2023 — Present",
+      "description": "Building automation scripts, CI/CD pipelines, and small ML projects for clients. Specializing in Python-based solutions."
+    }
+  ],
+  "contact": {
+    "email": "naman@example.com",
+    "github": "https://github.com/example",
+    "linkedin": "https://linkedin.com/in/example"
+  },
+  "socialLinks": [
+    { "platform": "GitHub", "url": "https://github.com/example" },
+    { "platform": "LinkedIn", "url": "https://linkedin.com/in/example" },
+    { "platform": "Mail", "url": "mailto:naman@example.com" }
+  ]
+}
