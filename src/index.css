@@ -1,0 +1,194 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 210 20% 98%;
+    --foreground: 220 20% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 10%;
+
+    --primary: 172 66% 26%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 15% 93%;
+    --secondary-foreground: 220 20% 10%;
+
+    --muted: 210 15% 93%;
+    --muted-foreground: 220 10% 46%;
+
+    --accent: 172 66% 26%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 15% 88%;
+    --input: 210 15% 88%;
+    --ring: 172 66% 26%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Custom tokens */
+    --nav-bg: 0 0% 100%;
+    --nav-active: 172 66% 26%;
+    --nav-inactive: 220 10% 46%;
+    --skill-bar: 172 66% 26%;
+    --skill-bar-bg: 210 15% 90%;
+    --timeline-line: 172 66% 26%;
+    --tag-bg: 172 66% 92%;
+    --tag-text: 172 66% 22%;
+  }
+
+  .dark {
+    --background: 220 20% 7%;
+    --foreground: 210 20% 92%;
+
+    --card: 220 18% 11%;
+    --card-foreground: 210 20% 92%;
+
+    --popover: 220 18% 11%;
+    --popover-foreground: 210 20% 92%;
+
+    --primary: 172 60% 40%;
+    --primary-foreground: 220 20% 7%;
+
+    --secondary: 220 15% 16%;
+    --secondary-foreground: 210 20% 92%;
+
+    --muted: 220 15% 16%;
+    --muted-foreground: 220 10% 55%;
+
+    --accent: 172 60% 40%;
+    --accent-foreground: 220 20% 7%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 210 20% 92%;
+
+    --border: 220 15% 18%;
+    --input: 220 15% 18%;
+    --ring: 172 60% 40%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    --nav-bg: 220 18% 11%;
+    --nav-active: 172 60% 40%;
+    --nav-inactive: 220 10% 55%;
+    --skill-bar: 172 60% 40%;
+    --skill-bar-bg: 220 15% 16%;
+    --timeline-line: 172 60% 40%;
+    --tag-bg: 172 40% 15%;
+    --tag-text: 172 60% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', system-ui, sans-serif;
+    @apply font-semibold tracking-tight;
+  }
+
+  code, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-2xl mx-auto px-5 pb-24 pt-6;
+  }
+
+  .section-title {
+    @apply text-2xl font-bold mb-6 text-foreground;
+  }
+
+  .project-card {
+    @apply bg-card border border-border rounded-xl p-5 transition-all duration-300;
+  }
+
+  .project-card:hover {
+    @apply border-primary shadow-md;
+    transform: translateY(-2px);
+  }
+
+  .skill-bar-track {
+    @apply h-2 rounded-full;
+    background-color: hsl(var(--skill-bar-bg));
+  }
+
+  .skill-bar-fill {
+    @apply h-2 rounded-full transition-all duration-1000 ease-out;
+    background-color: hsl(var(--skill-bar));
+  }
+
+  .tech-tag {
+    @apply text-xs font-medium px-2.5 py-1 rounded-md;
+    background-color: hsl(var(--tag-bg));
+    color: hsl(var(--tag-text));
+  }
+
+  .timeline-dot {
+    @apply w-3 h-3 rounded-full shrink-0;
+    background-color: hsl(var(--timeline-line));
+  }
+
+  .timeline-line {
+    @apply w-0.5 grow;
+    background-color: hsl(var(--timeline-line) / 0.25);
+  }
+
+  .bottom-nav {
+    @apply fixed bottom-0 left-0 right-0 z-50 border-t border-border flex justify-around items-center h-16;
+    background-color: hsl(var(--nav-bg));
+  }
+
+  .nav-item {
+    @apply flex flex-col items-center justify-center gap-0.5 text-xs transition-colors duration-200 py-1 px-3;
+    color: hsl(var(--nav-inactive));
+  }
+
+  .nav-item.active {
+    color: hsl(var(--nav-active));
+  }
+
+  .social-icon {
+    @apply w-10 h-10 rounded-full border border-border flex items-center justify-center transition-all duration-200;
+  }
+
+  .social-icon:hover {
+    @apply border-primary;
+    color: hsl(var(--primary));
+  }
+}
